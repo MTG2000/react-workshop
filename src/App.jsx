@@ -2,15 +2,20 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <h2 className="value">0</h2>
+    <>
+      <div className="background"></div>
+      <form>
+        <h3>Login Here</h3>
 
-      <div className="btns">
-        <button>Reset</button>
-        <button>Decrement</button>
-        <button>Increment</button>
-      </div>
-    </div>
+        <label htmlFor="email">Email</label>
+        <input type="email" placeholder="email@gmail.com" id="email" />
+
+        <label htmlFor="password">Password</label>
+        <input type="password" placeholder="Password" id="password" />
+
+        <button>Log In</button>
+      </form>
+    </>
   );
 }
 
