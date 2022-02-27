@@ -1,22 +1,14 @@
 import "./App.css";
-import ArticlesList from "./components/ArticlesList";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 
 function App() {
-  var name = "Ahmad";
-
   return (
-    <div>
-      {/* Navbar */}
-      <Navbar />
-      {/* Header */}
-      <Header />
+    <div className="container">
+      <h2 className="value">0</h2>
 
-      {/* Page Container */}
-      <div className="page-container">
-        {/* Articles List */}
-        <ArticlesList />
+      <div className="btns">
+        <button>Reset</button>
+        <button>Decrement</button>
+        <button>Increment</button>
       </div>
     </div>
   );

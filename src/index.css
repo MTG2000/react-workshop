@@ -14,100 +14,56 @@ body {
   background-color: rgb(238, 238, 238);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-nav {
-  background-color: #2196f3;
-  color: white;
-  padding: 16px 32px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.header {
-  position: relative;
-  height: 80vh;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.header h1 {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 68px;
-  z-index: 10;
-  text-align: center;
-}
-
-.page-container {
-  padding: 48px 0;
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.articles-list {
+.container {
+  min-height: 100vh;
   display: flex;
+  gap: 36px;
   flex-direction: column;
-  gap: 24px;
-  max-width: 660px;
+  justify-content: center;
+  align-items: center;
 }
 
-.article {
-  background-color: white;
-  padding: 24px;
-  border-radius: 12px;
+.container .value {
+  font-size: 120px;
+  font-family: monospace;
+  width: 300px;
+  height: 300px;
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #888;
+  box-shadow: 2px 4px 10px #ddd;
 }
 
-.article img {
-  width: 140px;
-  height: 140px;
-  flex-shrink: 0;
-  object-fit: cover;
-  border-radius: 12px;
+.btns {
+  display: flex;
+  gap: 12px;
 }
 
-.article .title {
-  font-size: 32px;
+.btns button:first-of-type {
+  margin-right: 24px;
 }
 
-.article .body {
-  font-size: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+button {
+  background-color: #010a39;
+  padding: 12px 24px;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  box-shadow: -5px 3px 0px 1px #020202;
+  transition: all 0.3s;
 }
 
-@supports (-webkit-line-clamp: 3) {
-  .article .body {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: initial;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
+button:hover {
+  background-color: #051046;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.9);
 }
