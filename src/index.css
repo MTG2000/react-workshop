@@ -11,125 +11,108 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(149deg, #262c52, #1f212d);
+  min-height: 100vh;
 }
 
 .container {
-  background: linear-gradient(149deg, #222a55, #77f3f2);
-  min-height: 100vh;
+  width: 90%;
+  max-width: 1100px;
+  margin: 200px auto;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tag {
+  background-color: #005e87;
+  color: white;
+  font-weight: bold;
+  border-radius: 36px;
+  padding: 4px 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.tag:active {
+  transform: scale(0.95);
+  background-color: rgb(0, 127, 201);
+}
+
+.tag.selected {
+  background-color: #03a2e6;
+  transform: scale(1.2);
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.game-card {
+  width: 256px;
+  background-color: black;
+  cursor: pointer;
+  position: relative;
+  text-transform: capitalize;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.game-card img {
+  width: 100%;
+  height: 295px;
+  object-fit: cover;
+}
+
+.game-card h6 {
+  margin: 0;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
-.card {
-  flex-basis: 90%;
-  max-width: 600px;
-  padding: 36px;
-  border-radius: 16px;
+.game-card .tags {
+  max-width: 90%;
+  flex-wrap: wrap;
+  margin: 24px auto;
   display: flex;
-  flex-direction: column;
-  gap: 48px;
+  gap: 6px;
+  justify-content: center;
 }
 
-input {
-  display: block;
-  height: 50px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.07);
-  border-radius: 3px;
-  padding: 0 10px;
-  font-size: 14px;
-  font-weight: 300;
+.game-card .game-tag {
+  font-size: 12px;
+  color: #2196f3;
 }
 
-form :is(button, input):focus {
-  outline: solid #00bcd4 4px;
+.loading {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  padding: 164px;
+  animation: smallBig 2s ease-in-out infinite;
 }
 
-::placeholder {
-  color: #b8b8b8;
-}
+@keyframes smallBig {
+  0% {
+    transform: translateY(0);
+  }
 
-.add-todo {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 140px;
-}
+  50% {
+    transform: translateY(-20px);
+  }
 
-.add-todo input {
-  background-color: white;
-}
-
-.add-todo button {
-  width: 100%;
-  background-color: #ffffff;
-  color: #080710;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.todos-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.todo-card {
-  background-color: whitesmoke;
-  padding: 16px 24px;
-  border-radius: 8px;
-  font-size: large;
-  display: flex;
-  justify-content: space-between;
-}
-
-.todo-card p {
-  flex-grow: 1;
-  cursor: pointer;
-}
-
-.todo-card .remove {
-  background-color: transparent;
-  color: #f44336;
-  border: 0;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s;
-  outline: none;
-  flex-shrink: 0;
-}
-
-.todo-card:hover .remove {
-  opacity: 1;
-}
-
-.todo-card.completed {
-  background-color: rgb(221, 221, 221);
-}
-
-.todo-card.completed p {
-  text-decoration: line-through;
-}
-
-.filters {
-  display: flex;
-  gap: 16px;
-}
-
-.filters button {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.212);
-  color: #fff;
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 0;
-}
-
-.filters button.active {
-  background-color: #ffffff75;
+  100% {
+    transform: translateY(0);
+  }
 }
