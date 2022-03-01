@@ -1,17 +1,15 @@
 
 import data from './data.json'
 
-const delay = (ms = 0) => new Promise((res, rej) => setTimeout(res, ms))
+const delay = (ms = 2000) => new Promise((res, rej) => setTimeout(res, ms))
 
 
-async function getAllGames() {
-    await delay()
-    return data.slice(0, 12);
-}
-
-async function getGamesByTag(tag) {
-    await delay()
-    return data.filter(game => game.tags.some(t => t === tag))
+async function getGames(tag) {
+    await delay();
+    if (tag)
+        return data.filter(game => game.tags.some(t => t === tag))
+    else
+        return data.slice(0, 12);
 }
 
 async function getAllTags() {
@@ -24,7 +22,6 @@ async function getAllTags() {
     return Object.keys(result);
 }
 
-
-const API = { getAllGames, getAllTags, getGamesByTag };
+const API = { getAllTags, getGames };
 
 export default API

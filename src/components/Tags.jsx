@@ -17,13 +17,15 @@ const tags = [
   "beat-em-up",
 ];
 
-export default function Tags() {
-  const handleClick = (tag) => {};
-
+export default function Tags({ selectedTag, handleChangeTag }) {
   return (
     <div className="tags">
       {tags.map((tag) => (
-        <div key={tag} className={`tag`} onClick={() => handleClick(tag)}>
+        <div
+          key={tag}
+          className={`tag ${tag === selectedTag ? "selected" : ""}`}
+          onClick={() => handleChangeTag(tag)}
+        >
           {tag}
         </div>
       ))}

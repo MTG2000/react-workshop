@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GameCard from "./GameCard";
 
-export default function GamesList() {
+export default function GamesList({ selectedTag }) {
   const [games, setGames] = useState([]);
 
   return (
