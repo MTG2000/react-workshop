@@ -13,6 +13,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wrapper {
+  padding: 64px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 2px 4px 10px #373535b0;
+}
+
 .container {
   background: linear-gradient(149deg, #222a55, #77f3f2);
   min-height: 100vh;
