@@ -1,7 +1,7 @@
 
 import data from './data.json'
 
-const delay = (ms = 2000) => new Promise((res, rej) => setTimeout(res, ms))
+const delay = (ms = 0) => new Promise((res, rej) => setTimeout(res, ms))
 
 
 async function getAllGames() {
@@ -23,6 +23,7 @@ async function getAllTags() {
 
     return Object.keys(result);
 }
+
 
 const API = { getAllGames, getAllTags, getGamesByTag };
 
