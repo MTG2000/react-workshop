@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { TodosContext } from "./TodosContext";
 
 export default function TodoFilters() {
-  const [filter, setFilter] = useState("all");
+  const { filter, setFilter } = useContext(TodosContext);
 
   return (
     <div className="filters">

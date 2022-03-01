@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import TodoCard from "./TodoCard";
-
-const initialData = [
-  { id: 1, text: "Do The Dishes", isCompleted: false },
-  { id: 2, text: "Take out the trash", isCompleted: true },
-  { id: 3, text: "Watch AOT", isCompleted: false },
-];
+import { TodosContext } from "./TodosContext";
 
 export default function TodoList() {
-  const [todos, setTodos] = useState(initialData);
-
+  const { todos, handleRemove, handleToggle } = useContext(TodosContext);
   return (
     <div className="todos-list">
       {todos.map((todo) => (
-        <TodoCard key={todo.id} todo={todo} />
+        <TodoCard
+          key={todo.id}
+          todo={todo}
+          handleRemove={handleRemove}
+          handleToggle={handleToggle}
+        />
       ))}
     </div>
   );

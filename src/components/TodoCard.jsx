@@ -1,17 +1,19 @@
 import React from "react";
 
-export default function TodoCard({ todo }) {
+export default function TodoCard({ todo, handleRemove, handleToggle }) {
   return (
     <div className={`todo-card ${todo.isCompleted ? "completed" : ""}`}>
       <p
         onClick={() => {
-          // Should toggle todo
+          handleToggle(todo.id);
         }}
       >
         {todo.text}
       </p>
 
-      <button className="remove">Remove</button>
+      <button onClick={() => handleRemove(todo.id)} className="remove">
+        Remove
+      </button>
     </div>
   );
 }

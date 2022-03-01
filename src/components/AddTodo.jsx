@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { TodosContext } from "./TodosContext";
 
 export default function AddTodo() {
   const [input, setInput] = useState("");
+  const { handleAddTodo } = useContext(TodosContext);
 
   const handleInputChange = (e) => setInput(e.target.value);
 
@@ -9,6 +11,7 @@ export default function AddTodo() {
     e.preventDefault();
     if (input.length > 0) {
       // Add the todo to the todos list
+      handleAddTodo(input);
       setInput("");
     }
   };
