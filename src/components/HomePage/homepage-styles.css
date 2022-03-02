@@ -6,6 +6,15 @@
   align-items: center;
   font-family: "Alfa Slab One", cursive;
   min-height: 80vh;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.home-page img {
+  width: 50%;
+  max-width: 260px;
+  filter: drop-shadow(0 0 6px #aaa);
+  animation: rotate 10s infinite forwards linear;
 }
 
 .home-page h1 {
@@ -21,7 +30,7 @@
 .home-page h1::before {
   content: "React Workshop Projects";
   font-family: revert;
-  color: #e221f3;
+  color: #227a91;
   position: absolute;
   top: 6px;
   left: 6px;
@@ -37,6 +46,16 @@
   }
 
   100% {
-    transform: scale(1.05);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(1turn);
   }
 }
