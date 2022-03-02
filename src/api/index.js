@@ -1,4 +1,5 @@
 
+import axios from 'axios';
 import data from './data.json'
 
 const delay = (ms = 2000) => new Promise((res, rej) => setTimeout(res, ms))
@@ -10,6 +11,9 @@ async function getGames(tag) {
         return data.filter(game => game.tags.some(t => t === tag))
     else
         return data.slice(0, 12);
+
+    //    return axios.get('/games/all/' + tag)
+
 }
 
 async function getAllTags() {
