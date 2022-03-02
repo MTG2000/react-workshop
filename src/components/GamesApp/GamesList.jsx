@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GameCard from "./GameCard/GameCard";
-import API from "../api";
+import API from "../../api";
 import ReactLoading from "react-loading";
 
 export default function GamesList({ selectedTag }) {
