@@ -1,19 +1,16 @@
-import { useState } from "react";
 import "./App.css";
-import GamesList from "./components/GamesList";
-import Tags from "./components/Tags";
+import GamesApp from "./components/GamesApp/GamesApp";
+import TodosApp from "./components/TodosApp/TodosApp";
+import Navbar from "./components/Navbar/Navbar";
+import LoginApp from "./components/LoginApp/LoginApp";
+import CounterApp from "./components/CounterApp/CounterApp";
+import HomePage from "./components/HomePage/HomePage";
 
 function App() {
-  const [selectedTag, setSelectedTag] = useState("");
-
   return (
-    <div className="container">
-      <Tags
-        selectedTag={selectedTag}
-        handleChangeTag={(tag) => setSelectedTag(tag)}
-      />
-      <GamesList selectedTag={selectedTag} />
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 }
 

@@ -1,26 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.wrapper {
+.todos-app .wrapper {
   padding: 64px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 2px 4px 10px #373535b0;
 }
 
-.container {
+.todos-app .container {
   background: linear-gradient(149deg, #222a55, #77f3f2);
   min-height: 100vh;
   display: flex;
@@ -28,7 +13,7 @@ body {
   align-items: center;
 }
 
-.card {
+.todos-app .card {
   flex-basis: 90%;
   max-width: 600px;
   padding: 36px;
@@ -38,7 +23,7 @@ body {
   gap: 48px;
 }
 
-input {
+.todos-app input {
   display: block;
   height: 50px;
   width: 100%;
@@ -49,25 +34,25 @@ input {
   font-weight: 300;
 }
 
-form :is(button, input):focus {
+.todos-app form :is(button, input):focus {
   outline: solid #00bcd4 4px;
 }
 
-::placeholder {
+.todos-app ::placeholder {
   color: #b8b8b8;
 }
 
-.add-todo {
+.todos-app .add-todo {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 140px;
 }
 
-.add-todo input {
+.todos-app .add-todo input {
   background-color: white;
 }
 
-.add-todo button {
+.todos-app .add-todo button {
   width: 100%;
   background-color: #ffffff;
   color: #080710;
@@ -77,13 +62,13 @@ form :is(button, input):focus {
   cursor: pointer;
 }
 
-.todos-list {
+.todos-app .todos-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.todo-card {
+.todos-app .todo-card {
   background-color: whitesmoke;
   padding: 16px 24px;
   border-radius: 8px;
@@ -92,12 +77,12 @@ form :is(button, input):focus {
   justify-content: space-between;
 }
 
-.todo-card p {
+.todos-app .todo-card p {
   flex-grow: 1;
   cursor: pointer;
 }
 
-.todo-card .remove {
+.todos-app .todo-card .remove {
   background-color: transparent;
   color: #f44336;
   border: 0;
@@ -108,24 +93,24 @@ form :is(button, input):focus {
   flex-shrink: 0;
 }
 
-.todo-card:hover .remove {
+.todos-app .todo-card:hover .remove {
   opacity: 1;
 }
 
-.todo-card.completed {
+.todos-app .todo-card.completed {
   background-color: rgb(221, 221, 221);
 }
 
-.todo-card.completed p {
+.todos-app .todo-card.completed p {
   text-decoration: line-through;
 }
 
-.filters {
+.todos-app .filters {
   display: flex;
   gap: 16px;
 }
 
-.filters button {
+.todos-app .filters button {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.212);
   color: #fff;
@@ -137,6 +122,6 @@ form :is(button, input):focus {
   border: 0;
 }
 
-.filters button.active {
+.todos-app .filters button.active {
   background-color: #ffffff75;
 }
