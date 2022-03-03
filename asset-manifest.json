@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-workshop/static/css/main.29fa3963.css",
-    "main.js": "/react-workshop/static/js/main.da14e5ff.js",
+    "main.js": "/react-workshop/static/js/main.58150519.js",
     "index.html": "/react-workshop/index.html",
     "main.29fa3963.css.map": "/react-workshop/static/css/main.29fa3963.css.map",
-    "main.da14e5ff.js.map": "/react-workshop/static/js/main.da14e5ff.js.map"
+    "main.58150519.js.map": "/react-workshop/static/js/main.58150519.js.map"
   },
   "entrypoints": [
     "static/css/main.29fa3963.css",
-    "static/js/main.da14e5ff.js"
+    "static/js/main.58150519.js"
   ]
 }
