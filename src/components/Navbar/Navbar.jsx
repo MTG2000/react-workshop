@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
-      <a href={"/"}>
+      <Link to={"/"}>
         <h2 className={styles.logo}>React Workshop Projects</h2>
-      </a>
+      </Link>
       <ul>
-        <a href={"/counter"}>Counter</a>
-        <a href={"/login"}>Login</a>
-        <a href={"/todos"}>Todos</a>
-        <a href={"/games"}>Games</a>
+        <Link to={"/counter"}>Counter</Link>
+        <Link to={"/login"}>Login</Link>
+        <Link to={"/todos"}>Todos</Link>
+        <Link to={"/games"}>Games</Link>
       </ul>
     </nav>
   );
