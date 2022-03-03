@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-workshop/static/css/main.29fa3963.css",
+    "main.js": "/react-workshop/static/js/main.da14e5ff.js",
+    "index.html": "/react-workshop/index.html",
+    "main.29fa3963.css.map": "/react-workshop/static/css/main.29fa3963.css.map",
+    "main.da14e5ff.js.map": "/react-workshop/static/js/main.da14e5ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29fa3963.css",
+    "static/js/main.da14e5ff.js"
+  ]
+}
